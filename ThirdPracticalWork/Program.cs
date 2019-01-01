@@ -109,13 +109,12 @@ namespace ThirdPracticalWork
             int[] arrayA = new int[SIZE_M]{ 2, 5, 4, 0, 8, 8, 6, 2};
             int[] arrayB = new int[SIZE_N]{ 3, 8, 5, 2, 2, 4, 8, 7, 3, 6};
 
-            Console.WriteLine("Массив A: "); PrintArray(arrayA);
-            Console.WriteLine("Массив B: "); PrintArray(arrayB);
+            Console.WriteLine("Массив A:\n" + string.Join("  ", arrayA));
+            Console.WriteLine("\nМассив B:\n" + string.Join("  ", arrayB));
 
             int[] arrayC = arrayA.Intersect(arrayB).ToArray();
-
-            Console.WriteLine("Массив C: "); PrintArray(arrayC);
-            //Console.WriteLine(string.Join(" ", arrayC));
+            
+            Console.WriteLine("\nМассив C:\n" + string.Join("  ", arrayC));
         }
 
         static string Task3()
@@ -201,14 +200,6 @@ namespace ThirdPracticalWork
             int temp = a;
             a = b;
             b = temp;
-        }
-        static void PrintArray(int[] array)
-        {
-            foreach (int item in array)
-            {
-                Console.Write(item + "  ");
-            }
-            Console.WriteLine("\n");
         }
     }
 }
